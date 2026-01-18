@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asteroids - Retro Clone</title>
+    <title>Ass-Troids - Retro Clone</title>
     <style>
       :root {
         color-scheme: dark;
@@ -94,14 +94,14 @@
   <body>
     <div class="frame">
       <header>
-        <h1>Asteroids / Retro Command</h1>
+        <h1>Ass-Troids / Retro Command</h1>
         <div class="stats">
           <div>Score: <span id="score">00000</span></div>
           <div>Lives: <span id="lives">3</span></div>
           <div>Wave: <span id="wave">1</span></div>
         </div>
       </header>
-      <canvas id="game" width="900" height="550" aria-label="Asteroids retro canvas"></canvas>
+      <canvas id="game" width="900" height="550" aria-label="Ass-Troids retro canvas"></canvas>
       <div class="controls">
         <div><strong>Controls</strong> · Arrow keys or WASD to steer · Space to fire · Shift for hyperspace.</div>
         <div class="start" id="status">Press Enter to launch.</div>
@@ -345,7 +345,7 @@
         ctx.save();
         ctx.translate(ship.x, ship.y);
         ctx.rotate(ship.angle + Math.PI / 2);
-        ctx.strokeStyle = ship.invincible > 0 ? "#ffd66a" : "#e2f9ff";
+        ctx.strokeStyle = ship.invincible > 0 ? "#ff6b6b" : "#ff1f1f";
         ctx.lineWidth = 2;
         ctx.beginPath();
         ctx.moveTo(0, -18);
@@ -359,7 +359,7 @@
           ctx.moveTo(-6, 12);
           ctx.lineTo(0, 22 + Math.random() * 6);
           ctx.lineTo(6, 12);
-          ctx.strokeStyle = "#ff6b6b";
+          ctx.strokeStyle = "#ff3b3b";
           ctx.stroke();
         }
         ctx.restore();
@@ -398,7 +398,7 @@
         });
 
         state.bullets.forEach((bullet) => {
-          ctx.fillStyle = "#ffd66a";
+          ctx.fillStyle = "#d4a017";
           ctx.fillRect(bullet.x - 2, bullet.y - 2, 4, 4);
         });
 
@@ -411,7 +411,7 @@
           ctx.fillStyle = "#60f8ff";
           ctx.font = "20px 'Courier New', monospace";
           ctx.textAlign = "center";
-          ctx.fillText("ASTEROIDS RETRO", canvas.width / 2, canvas.height / 2 - 10);
+          ctx.fillText("ASS-TROIDS RETRO", canvas.width / 2, canvas.height / 2 - 10);
           ctx.fillText("Press Enter to Start", canvas.width / 2, canvas.height / 2 + 20);
         }
       }
